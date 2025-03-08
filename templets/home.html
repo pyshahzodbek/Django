@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for blog in blogs%}
-    <h2> <a href="">{{blog.title}}</a></h2>
+    <h2> <a href="{% url 'blog_detail' blog.pk%}">{{blog.title}}</a></h2>
         <P> {{ blog.author }}  </P>
     {% endfor %}
 {% endblock content %}
